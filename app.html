@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empower Ability Labs</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <img src="assets/images/logo.png" alt="Empower Ability Labs Logo" class="logo">
+            <nav>
+                <ul class="nav">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#schedule" class="nav-link">Schedule a call</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to Empower Ability Labs!</h1>
+        <p>Empower Ability Labs is a hub for learning and empathy-building. We are on a mission...</p>
+        <button id="meetCommunityBtn">Meet the Empower Community</button>
+        <p>Learn more about:</p>
+        <div class="learn-more-links">
+            <a href="https://www.google.com/search/howsearchworks/our-approach/" target="_blank">Our Approach</a>
+            <a href="https://www.elevenways.be/en/services" target="_blank">Services</a>
+            <a href="https://dictionary.cambridge.org/us/dictionary/english/testimonial" target="_blank">Testimonials</a>
+        </div>
+    </section>
+
+    <!-- Modal for Community -->
+    <div id="communityModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Community Steering Committee</h2>
+            <p>We get aha! moments from product managers who try our services for the first time...</p>
+            <ul>
+                <li>McGill University</li>
+                <li>Walmart.ca</li>
+                <li>Apple.ca</li>
+                <li>Google.ca</li>
+                <li>Government of Canada</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Services</h2>
+        <p>Empathy Lab days and workshops...</p>
+        <button id="serviceModalBtn">Learn more</button>
+    </section>
+
+    <!-- Schedule a Call Section -->
+    <section id="schedule">
+        <h2>Schedule a Call</h2>
+        <form id="scheduleForm">
+            <label for="businessName">Business Name:</label>
+            <input type="text" id="businessName" name="businessName">
+
+            <label for="phone">Phone number (613-123-1234):</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="email">Email (required):</label>
+            <input type="email" id="email" name="email" required>
+
+            <p>What would you like to talk about:</p>
+            <input type="checkbox" id="awareness" name="topic">
+            <label for="awareness">Awareness lab days and workshops</label>
+
+            <input type="checkbox" id="inviteSpeaker" name="topic">
+            <label for="inviteSpeaker">Invite a speaker with disabilities to your event</label>
+
+            <input type="checkbox" id="usability" name="topic">
+            <label for="usability">Usability testing</label>
+
+            <div id="eventDetails" class="hidden">
+                <label for="eventDescription">Tell us about your event:</label>
+                <textarea id="eventDescription" name="eventDescription"></textarea>
+            </div>
+
+            <label>
+                <input type="checkbox" id="subscribe"> Receive emails about updates and services
+            </label>
+
+            <button type="submit">Schedule a call</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Empower Ability Labs Inc 2023. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

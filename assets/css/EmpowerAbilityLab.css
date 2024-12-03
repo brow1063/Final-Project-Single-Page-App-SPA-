@@ -1,0 +1,68 @@
+/* Custom styles for Empower Ability Labs */
+.navbar-brand img {
+    height: 60px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+
+  ul.dotted-list {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%; /* Increase modal width to fit title */
+    max-width: 800px; /* Ensure the modal is not excessively large */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #aaa;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close-btn:focus,
+  .close-btn:hover {
+    color: #000;
+    outline: none;
+  }
+  
+  /* Title Styling */
+  .modal-title {
+    font-size: 1.8rem; /* Larger font for title */
+    margin-bottom: 10px;
+    white-space: normal; /* Allow title to fit without ellipsis */
+    overflow: visible;
+    text-overflow: clip; /* Remove any truncation behavior */
+    text-align: left; /* Center-align the title */
+  }
+  
+  

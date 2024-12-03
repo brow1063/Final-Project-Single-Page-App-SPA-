@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Foster understanding and promote inclusive digital experiences for all">
+  <meta name="author" content="">
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom styles for Empower Ability Labs -->
+  <link rel="stylesheet" href="assets/css/EmpowerAbilityLab.css">
+
+</head>
+
+<body>
+  <header>
+    <!-- I replaced bg-secondary to make the logo accessible -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-secondary fixed-top">
+      <!-- Made sure that the logo + nav bar started exactly has the main landing view -->
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand mb-2" href="https://www.google.ca/">
+          <img src="assets/images/empowerabilitylabslogo.png" alt="Empower Ability Labs Logo">
+        </a>
+        <div class="collapse navbar-collapse " id="navbarContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#home.html" aria-label="Navigate to Home section">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="services.html" aria-label="Navigate to Services section">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="schedule.html" aria-label="Navigate to Schedule section">Schedule a
+                Call</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mt-4">
+    <!-- Main landing view -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome to Empower Ability Labs!</h1>
+        <p>Empower Ability Labs is a hub for learning and empathy-building. We are on a mission to foster understanding
+          and
+          promote inclusive digital experiences for all. We offer a range of services designed to promote accessibility
+          awareness,
+          drive inclusivity, and enhance the user experience. And help you find answers on How do people with
+          disabilities use
+          technology and navigate the digital world? What tools do they employ? . </p>
+          <button id="openModal" class="btn btn-primary">Meet the Empower Community!</button>
+      </div>
+    </div>
+
+      <!-- Modal Structure -->
+      <div id="communityModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+        <div class="modal-content">
+          <button class="close-btn" id="closeModal" aria-label="Close Modal">&times;</button>
+          <h2 id="modalTitle" class="modal-title">Community Steering Committee</h2>
+          <p id="modalDescription">
+            We get aha! moments from product managers who try our services for the first time. We offered many lab days,
+            workshops, and usability testing services to many companies and organizations including:
+          </p>
+          <ul>
+            <li>McGill University</li>
+            <li>Walmart.ca</li>
+            <li>Apple.ca</li>
+            <li>Google.ca</li>
+            <li>Government of Canada</li>
+          </ul>
+          <button type="button" onclick="closeDialog(this)">Cancel</button>
+        </div>
+      </div>
+
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Our Approach</h2>
+          <p>Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy.
+            Our immersive workshops and lab days provide participants with a unique opportunity to step into the
+            shoes of individuals with disabilities and navigate the world from their perspective.</p>
+          <a href="https://www.google.com/search/howsearchworks/our-approach/" target="_blank" aria-label="Learn more about our approach">Learn more</a>
+        </div>
+        <div class="col-md-4">
+          <h2>Services</h2>
+          <p>Promote accessibility awareness and enhance the user experience. </p>
+          <ul class="dotted-list">
+            <li>Empathy lab days and workshops</li>
+            <li>Go beyond WCAG compliance!</li>
+            <li>Inspirational speakers</li>
+          </ul>
+          <a href="https://www.elevenways.be/en/services" target="_blank" aria-label="Learn more about the Services">Learn more</a>
+        </div>
+        <div class="col-md-4">
+          <h2>Testimonials</h2>
+          <p>Invite a speaker with disabilities to share their unique journey. This captivating addition to your
+            upcoming event
+            will offer insights that resonate, inspire, educate, and enrich your team’s understanding of inclusion. </p>
+          <a href="https://dictionary.cambridge.org/us/dictionary/english/testimonial" target="_blank" aria-label="Learn more about the Testimonials">Learn more</a>
+
+        </div>
+      </div>
+
+      <hr>
+
+    </div> <!-- /container -->
+
+  </main>
+
+  <footer class="container">
+    <!-- text changed -->
+    <p>© Copyright Empower Ability Labs Inc 2023. All rights reserved. </p>
+  </footer>
+
+
+
+  <script src="assets/js/EmpowerAbilityLab.js"></script>
+
+
+</body>
+
+</html>
