@@ -51,7 +51,7 @@
   
   .close-btn:focus,
   .close-btn:hover {
-    color: #000;
+    outline: 3px solid #007bff;
     outline: none;
   }
   
@@ -65,12 +65,17 @@
     text-align: left; /* Center-align the title */
   }
   
+  .cancel-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
 
   /* for focus */
   /* Clear and accessible outline for focused elements */
 a:focus, button:focus, input:focus, select:focus, textarea:focus {
   outline: 3px solid #007bff; /* Use a color with sufficient contrast */
-  outline-offset: 3px; /* Provide some spacing around the element */
+  outline-offset: 0.5px; /* Provide some spacing around the element */
 }
 
 /* Optional: Add a style for keyboard focus specifically */
