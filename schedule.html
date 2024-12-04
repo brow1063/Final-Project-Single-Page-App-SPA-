@@ -85,25 +85,30 @@
           </div>
         </fieldset>
 
-        <div id="additional-info-container" style="display: none;">
-          <label for="additional-info" class="mt-3">Tell us about your event!</label>
-          <textarea id="additional-info" name="additional-info" class="form-control" rows="4"
-              placeholder="Provide any additional details or questions..." aria-describedby="additional-info-help"></textarea>
-        
+                <!-- Additional Info Section -->
+                <div id="additional-info-container" style="display: none;">
+                <label for="additional-info" class="mt-3">Tell us about your event!</label>
+                  <textarea id="additional-info" name="additional-info" class="form-control" rows="4"
+                  placeholder="Provide any additional details or questions..." aria-describedby="additional-info-help"></textarea>
+                </div>
 
-        <!-- Switch Element -->
-        <div class="d-flex align-items-center mt-3">
-          <label class="mr-2" for="email-updates">Receive emails about updates and services</label>
-          <label class="switch">
-              <input type="checkbox" id="email-updates" role="switch">
-              <span class="slider round"></span>
-          </label>
-      </div>
+        <!-- Always Visible Elements -->
+                <div>
+                  <!-- Slider for Email Updates -->
+                <div class="d-flex align-items-center mt-3">
+                <label class="mr-2" for="email-updates">Receive emails about updates and services</label>
+                <label class="switch">
+                  <input type="checkbox" id="email-updates" role="switch">
+                  <span class="slider round"></span>
+              </label>
+          </div>
 
-        <button type="button" id="scheduleCallButton" class="btn btn-primary mt-3" aria-label="Submit form to schedule a call">
-          Schedule a Call
-        </button>
-        <hr>
+          <!-- Schedule a Call Button -->
+          <button type="button" id="scheduleCallButton" class="btn btn-primary mt-3" aria-label="Submit form to schedule a call">
+              Schedule a Call
+          </button>
+          <hr>
+        </div>
       </form>
 
       <div id="formErrorMessages" class="alert alert-danger mt-3" role="alert" hidden>
