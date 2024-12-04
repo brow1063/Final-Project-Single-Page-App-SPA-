@@ -46,21 +46,26 @@
   <main class="mt-4">
     <!-- Schedule a Call main content -->
     <div class="jumbotron">
-      <div class="container">
-        <h1>Schedule a Call</h1>
-        <p>Fill out the form below, and we’ll get back to you as soon as we can to schedule a call with our sales team!</p>
-      </div>
+        <div class="container">
+            <h1>Schedule a Call</h1>
+            <div class="d-flex align-items-center">
+                <p class="mr-3 mb-0">
+                    Fill out the form below, and we’ll get back to you as soon as we can to schedule a call with our sales team!
+                </p>
+                <img src="assets/images/scheduleacall.png" alt="Cartoon man taking a selfie" style="max-height: 150px; width: auto;">
+            </div>
+        </div>
     </div>
 
     <div class="container">
       <form id="scheduleForm">
-        <label for="business-name">Business Name:</label>
-        <input type="text" id="business-name" name="business-name" class="form-control" required>
+        <label for="business-name">Business Name</label>
+        <input type="text" id="business-name" name="business-name" class="form-control">
 
-        <label for="phone-number">Phone Number:</label>
-        <input type="tel" id="phone-number" name="phone-number" class="form-control" required>
+        <label for="phone-number">Phone Number (613-123-1234)</label>
+        <input type="tel" id="phone-number" name="phone-number" class="form-control">
 
-        <label for="email">Email (required):</label>
+        <label for="email">Email (required)</label>
         <input type="email" id="email" name="email" class="form-control" required>
 
         <fieldset>
@@ -78,6 +83,10 @@
             <label for="usability">Usability testing</label>
           </div>
         </fieldset>
+
+        <label for="additional-info" class="mt-3">Tell us about your event!</label>
+        <textarea id="additional-info" name="additional-info" class="form-control" rows="4" placeholder="Provide any additional details or questions..."></textarea>
+
 
         <button type="button" id="scheduleCallButton" class="btn btn-primary mt-3" aria-label="Submit form to schedule a call">
           Schedule a Call

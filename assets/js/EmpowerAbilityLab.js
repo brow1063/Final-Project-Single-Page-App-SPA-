@@ -56,6 +56,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+    document.getElementById('scheduleCallButton').addEventListener('click', () => {
+      const form = document.getElementById('scheduleForm');
+      const email = form.email.value;
+      const phone = form['phone-number'].value;
+      const errorMessages = [];
+  
+      if (!email || !email.includes('@')) {
+          errorMessages.push('Please provide a valid email.');
+      }
+  
+      if (!phone || phone.length < 10) {
+          errorMessages.push('Please provide a valid phone number.');
+      }
+  
+      if (errorMessages.length > 0) {
+          alert(errorMessages.join('\n'));
+      } else {
+          document.getElementById('formSuccessMessage').hidden = false;
+      }
+  });
+  
   });
   
 
