@@ -125,6 +125,18 @@ document.addEventListener("DOMContentLoaded", () => {
         additionalInfoContainer.style.display = this.checked ? 'block' : 'none';
     });
 
+    
+    // Function to highlight error fields
+    function highlightErrorField(field) {
+      field.classList.add('is-invalid'); 
+  }
+
+  // Function to reset error fields
+  function resetErrorField(field) {
+      field.classList.remove('is-invalid'); 
+      field.addEventListener('input', () => field.classList.remove('is-invalid'), { once: true });
+  }
+
     // Update: Handle Enter key for accessibility
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
