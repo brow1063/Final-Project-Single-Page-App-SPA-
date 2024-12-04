@@ -10,10 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
       closeModalButton.focus(); // Move focus to close button
     });
   
-    // Handle closing the modal
+    // Handle closing the modal 
     closeModalButton.addEventListener("click", closeModal);
     modal.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
+      // closing modal with enter & spacekey
+      if (event.key === "Escape" || event.key === "Enter" || event.key === " ") {
         closeModal();
       }
     });
