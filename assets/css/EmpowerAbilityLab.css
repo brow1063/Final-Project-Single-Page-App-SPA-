@@ -51,7 +51,7 @@
   
   .close-btn:focus,
   .close-btn:hover {
-    outline: 3px solid #007bff;
+    outline: 3px solid #0070f4;
     outline: none;
   }
   
@@ -74,13 +74,13 @@
   /* for focus */
   /* Clear and accessible outline for focused elements */
 a:focus, button:focus, input:focus, select:focus, textarea:focus {
-  outline: 3px solid #007bff; /* Use a color with sufficient contrast */
+  outline: 3px solid #0070f4; /* Use a color with sufficient contrast */
   outline-offset: 0.5px; /* Provide some spacing around the element */
 }
 
 /* Optional: Add a style for keyboard focus specifically */
 :focus-visible {
-  outline: 3px solid #007bff;
+  outline: 3px solid #0070f4;
   outline-offset: 3px;
 }
 
@@ -134,6 +134,6 @@ input:checked + .slider:before {
 
 /* Focus styling */
 input:focus + .slider {
-  box-shadow: 0 0 3px #007bff;
-  outline: 2px solid #007bff;
+  box-shadow: 0 0 3px #0070f4;
+  outline: 2px solid #0070f4;
 }
