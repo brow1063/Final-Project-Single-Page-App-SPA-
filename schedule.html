@@ -76,7 +76,7 @@
             <label for="awareness">Awareness lab days and workshops</label>
           </div>
           <div>
-            <input type="checkbox" id="speaker" name="topic" value="speaker">
+            <input type="checkbox" id="speaker" name="topic" value="speaker" aria-controls="additional-info-container">
             <label for="speaker">Invite a speaker with disabilities to your event</label>
           </div>
           <div>
@@ -85,8 +85,11 @@
           </div>
         </fieldset>
 
-        <label for="additional-info" class="mt-3">Tell us about your event!</label>
-        <textarea id="additional-info" name="additional-info" class="form-control" rows="4" placeholder="Provide any additional details or questions..."></textarea>
+        <div id="additional-info-container" style="display: none;">
+          <label for="additional-info" class="mt-3">Tell us about your event!</label>
+          <textarea id="additional-info" name="additional-info" class="form-control" rows="4"
+              placeholder="Provide any additional details or questions..." aria-describedby="additional-info-help"></textarea>
+        
 
         <!-- Switch Element -->
         <div class="d-flex align-items-center mt-3">
