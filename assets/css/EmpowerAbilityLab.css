@@ -137,3 +137,11 @@ input:focus + .slider {
   box-shadow: 0 0 3px #0070f4;
   outline: 2px solid #0070f4;
 }
+
+.btn-primary {
+  background-color: #0070f4; 
+}
+
+a {
+  color: #0070f4; 
+}
