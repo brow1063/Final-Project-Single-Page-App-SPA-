@@ -51,7 +51,7 @@
   
   /*close button focus*/
   .close-btn:focus{
-      outline: 3px solid #5c6268; 
+      outline: 3px solid #0070f4; 
       outline-offset: 2px; /* Optional offset to make it more visible */
   }
   /*added styles for close button*/

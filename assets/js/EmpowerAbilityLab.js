@@ -1,51 +1,69 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.getElementById("communityModal");
-    const openModalButton = document.getElementById("openModal");
-    const closeModalButton = document.getElementById("closeModal");
-    
-    // Handle opening the modal
-    openModalButton.addEventListener("click", () => {
+  const modal = document.getElementById("communityModal");
+  const openModalButton = document.getElementById("openModal");
+  const closeModalButton = document.getElementById("closeModal");
+  const cancelButton = document.getElementById("cancelModal");
+
+  // Handle opening the modal
+  openModalButton.addEventListener("click", () => {
       modal.style.display = "block";
       modal.setAttribute("aria-hidden", "false");
       closeModalButton.focus(); // Move focus to close button
-    });
-  
-    // Handle closing the modal 
-    closeModalButton.addEventListener("click", closeModal);
-    modal.addEventListener("keydown", (event) => {
-      // closing modal with enter & spacekey
-      if (event.key === "Escape" || event.key === "Enter" || event.key === " ") {
-        closeModal();
+  });
+
+  // Handle closing the modal
+  closeModalButton.addEventListener("click", closeModal);
+  cancelButton.addEventListener("click", closeModal);
+
+  // Handle closing the modal with Enter & Space keys
+  closeModalButton.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          closeModal();
       }
-    });
-  
-    function closeModal() {
+  });
+
+  cancelButton.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          closeModal();
+      }
+  });
+
+  modal.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+          closeModal();
+      }
+  });
+
+  function closeModal() {
       modal.style.display = "none";
       modal.setAttribute("aria-hidden", "true");
       openModalButton.focus(); // Return focus to the button
-    }
-  
-    // Trap focus inside the modal when it's open
-    modal.addEventListener("keydown", (event) => {
+  }
+
+  // Trap focus inside the modal when it's open
+  modal.addEventListener("keydown", (event) => {
       if (event.key === "Tab") {
-        const focusableElements = modal.querySelectorAll("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])");
-        const firstElement = focusableElements[0];
-        const lastElement = focusableElements[focusableElements.length - 1];
-  
-        if (event.shiftKey) { // Shift + Tab
-          if (document.activeElement === firstElement) {
-            event.preventDefault();
-            lastElement.focus();
+          const focusableElements = modal.querySelectorAll("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])");
+          const firstElement = focusableElements[0];
+          const lastElement = focusableElements[focusableElements.length - 1];
+
+          if (event.shiftKey) { // Shift + Tab
+              if (document.activeElement === firstElement) {
+                  event.preventDefault();
+                  lastElement.focus();
+              }
+          } else { // Tab
+              if (document.activeElement === lastElement) {
+                  event.preventDefault();
+                  firstElement.focus();
+              }
           }
-        } else { // Tab
-          if (document.activeElement === lastElement) {
-            event.preventDefault();
-            firstElement.focus();
-          }
-        }
       }
-    });
   });
+});
+
 
   document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('scheduleForm');
