@@ -96,14 +96,12 @@
                     </small>
                 </div>
 
-        <!-- Always Visible Elements -->
                 <div>
-                  <!--check here for the label for the slider-->
                   <!-- Slider for Email Updates -->
                   <div class="d-flex align-items-center mt-3">
                     <label for="email-updates" class="mr-2">Receive emails about updates and services</label>
                     <label class="switch">
-                        <input type="checkbox" id="email-updates" role="switch">
+                        <input type="checkbox" id="email-updates" role="switch" aria-label="Toggle email updates subscription">
                         <span class="slider round"></span>
                     </label>
                 </div>
@@ -117,11 +115,11 @@
         </div>
       </form>
 
-      <div id="formErrorMessages" class="alert alert-danger mt-3" role="alert" hidden>
+      <div id="formErrorMessages" class="alert alert-danger mt-3" role="alert" hidden aria-live="polite">
         <!-- Errors will be dynamically inserted here -->
     </div>
 
-      <div id="formSuccessMessage" class="alert alert-success mt-3" role="alert" hidden>
+      <div id="formSuccessMessage" class="alert alert-success mt-3" role="alert" hidden aria-live="polite">
         Thank you! Your request has been submitted. We will contact you soon.
       </div>
     </div>
