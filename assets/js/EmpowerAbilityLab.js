@@ -76,6 +76,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailField = document.getElementById('email');
     const businessNameField = document.getElementById('business-name');
 
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarContent = document.getElementById("navbarContent");
+
+    navbarToggler.addEventListener("click", function() {
+      if (navbarContent.classList.contains("collapse")) {
+        navbarContent.classList.remove("collapse");
+      } else {
+        navbarContent.classList.add("collapse");
+      }
+    });
+
     scheduleButton.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent form submission
         const errors = [];
@@ -137,6 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             successMessage.innerText = `Thank you! Your request has been submitted.${emailUpdatesMessage}`;
         }
+
+        
     });
 
     // Show/Hide Additional Info Container for "Invite a Speaker"
